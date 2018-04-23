@@ -1,0 +1,116 @@
+html {font-size: 62.5%;}
+body {background:rgb(185,227,151, 0.9);}
+.sticker {
+  padding-top:20px;
+  background:#ffffff;
+  min-height:100px;
+  min-width:100px;
+  position:absolute;
+  left:0;
+  top:0;
+  border:1px solid rgb(62,114,19);
+  background:rgb(185,227,151);
+  box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+}
+.sticker:hover {
+  z-index:2;
+}
+.sticker .bar {
+  position:absolute;
+  top:0;
+  left:0;
+  height:40px;
+  background:rgb(62,114,19);
+  width:100%;
+}
+.sticker textarea {
+  padding-left:20px;
+  padding-top:30px;
+  box-sizing:border-box;
+  min-height:200px;
+  min-width:300px;
+  border:none;
+  background:transparent;
+  color:rgb(34,76,0);
+  font-size:2.0em;
+}
+.sticker .bar:hover {
+  cursor:move;
+  background:rgb(34,76,0);
+}
+.saveBtn, .delBtn{
+  border:none;
+  position:absolute;
+  top:10px;
+  height:20px;
+  width:20px;
+  cursor:pointer;
+  border-radius:50%;
+}
+.saveBtn{
+  background:rgb(185,227,151);
+  left:8px;
+}
+.delBtn{
+  right:8px;
+  background:transparent;
+}
+.saveBtn:hover{
+  border-radius:0%;
+  top:5px;
+  width:95px;
+  height:35px;
+  -webkit-transition: width  0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+}
+.saveBtn:hover::after{
+  font-size:1.6em;
+  font-weight:bold;
+  color:rgb(34,76,0);
+  content: "SAVE";
+}
+.delBtn:hover{
+    background:rgba(255, 0, 0, 0);
+}
+.delBtn::after{
+  content:"X";
+  color:rgb(185,227,151);
+}
+.addNoteBtn{
+  margin:15px;
+  width:200px;
+  height:75px;
+  border:3px solid rgb(62,114,19);
+  color:rgb(34,76,0);
+  background:rgb(185,227,151);
+  z-index:1;
+  cursor:pointer;
+}
+span{font-size:1.8em;}
+.addNoteBtn:hover{
+  border:3px solid rgb(34,76,0);
+  transition:border 0.2s;
+  background:rgb(185,227,151, 0.8);
+}
+[data-title]{
+  position:relative;
+  font-size:1.8em;
+}
+[data-title]:hover::after{
+  height:45px;
+  content:attr(data-title);
+  position:absolute;
+  top:85px;
+  left:0;
+  background:rgb(62,114,19);
+  color:rgb(185,227,151);
+  padding:10px;
+  border:1px solid rgb(185,227,151);
+}
+[data-title]:hover::before{
+  content:"";
+  border-top:10px solid rgb(34,76,0);
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+}
